@@ -3,6 +3,10 @@
 # dependencies
 node_modules/
 
+# local tooling
+.idea/
+.playwright-mcp/
+
 # Expo
 .expo/
 dist/

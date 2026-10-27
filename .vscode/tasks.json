@@ -1,0 +1,10 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    { "label": "Expo: start", "type": "shell", "command": "npm start", "isBackground": true, "problemMatcher": [] },
+    { "label": "Expo: web", "type": "shell", "command": "npm run web", "isBackground": true, "problemMatcher": [] },
+    { "label": "Test", "type": "shell", "command": "npm test", "group": { "kind": "test", "isDefault": true }, "problemMatcher": [] },
+    { "label": "Typecheck", "type": "shell", "command": "npm run typecheck", "group": "build", "problemMatcher": ["$tsc"] },
+    { "label": "Simulate balance", "type": "shell", "command": "npm run simulate", "problemMatcher": [] }
+  ]
+}

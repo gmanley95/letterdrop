@@ -1,0 +1,18 @@
+# Game rules
+
+1. **Daily board.** Everyone gets the same board for a date (seed `letterdrop-v{RULES_VERSION}-YYYY-MM-DD`, version defined in `src/engine/rules.ts`). Practice uses a random seed and doesn't affect your streak.
+2. **Board.** 30 small letter balls and six small plain pegs (no letter), scattered randomly each board with no rows or grid, all spaced so the dropped ball always fits between neighbours, 4 curved wall bumpers (two per side), and a tray at the top showing the next 12 of 40 queued letters.
+3. **Drops.** You get 5. Before each one: move the ball up, down, left or right within the launch zone between the tray and dotted line (1.5 balls tall). Drag below the line to aim and adjust energy, or drag the energy control or tap Small / Medium / Large. Precision is locked to Medium, and its preview stops at the third bounce or halfway down the board, whichever comes first. Aim is limited to 50° either side of straight down (dashed guides show the limits). Tap the ball, or use the chips, to switch ball type. The bottom dotted line marks the exit; crossing it ends the drop.
+4. **Balls.**
+   | Ball | Letter balls | Plain pegs, bumpers, empty slots | Walls | Letter cap | Aim preview |
+   |---|---|---|---|---|---|
+   | Normal | bounce (0.62) | bounce (0.62) | bounce (0.72) | none (rack space) | short |
+   | Precision | soft bounce (0.22), damped | soft bounce (0.22) | 0.40 | rack space | through at most three bounces |
+   | Pass-through | passes through (still collects) | bounce (0.70) | bounce (0.92) | 8 | short |
+5. **Collecting.** Every letter ball the drop touches goes to your rack (10 tiles max), once per ball. Collected balls stay dimmed during word building.
+6. **Words.** After each drop, submit one word of 3+ letters from your rack, or skip. When a word is still possible, unused letters return to their original board spots and must be hit again on the next drop. The rack clears after either action. Invalid words cost nothing and leave the rack and board unchanged. Tap **Suggest** to fill in a middle-scoring word (not the best one); you can edit or clear it. The word row shows a live check ("n more", "✓ Word", "✗ Not a word"). Tap a tile in the word row to remove it, and tap **⇄** to shuffle the rack display (selection is kept). The results screen reveals the single best-scoring word available from any post-drop rack, shown only at the end of the game.
+7. **Refill.** Each used tile's board slot is refilled from the front of the tray, in the order the tiles were collected (activation order). Queued balls tumble into those slots before the next turn. For BARK collected in that order and queue OARK, O replaces B, A replaces A, R replaces R and K replaces K. Word-selection order does not change queue order. When the tray runs out, used slots stay empty.
+8. **Blanks.** Every new board starts with at least one `?` ball. `?` tiles stand for any letter you choose and score 0; using one may leave no blank on the board until a new one is drawn.
+9. **Scoring.** Sum of Scrabble letter values: A E I O U L N S T R = 1, D G = 2, B C M P = 3, F H V W Y = 4, K = 5, J X = 8, Q Z = 10. No multipliers.
+10. **End.** The game ends after the 5th drop's build step, or after 5 words. **Share score ⭐ = sum of your top 3 word scores.**
+11. **No words.** If your rack can't form any valid word, the game says "No words can be formed" and offers *Destroy & next drop*: every collected letter is destroyed, its board spot is refilled from the tray (tumble animation), and the drop still counts. If no word was made all game, the results screen says so.

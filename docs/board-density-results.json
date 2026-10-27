@@ -1,0 +1,47 @@
+{
+  "rulesVersion": 7,
+  "seeds": 100,
+  "simulatedOpeningShots": 4500,
+  "policy": "Best letter-count opening shot among 15 medium-force aims; ties keep the first shot.",
+  "scope": "Opening-drop comparison only, not a full five-drop daily balance audit.",
+  "before": [
+    {
+      "type": "normal",
+      "meanLetters": 7.88,
+      "meanWordChoices": 498.4,
+      "playablePct": 99
+    },
+    {
+      "type": "precision",
+      "meanLetters": 5.75,
+      "meanWordChoices": 131.98,
+      "playablePct": 97
+    },
+    {
+      "type": "pass",
+      "meanLetters": 4,
+      "meanWordChoices": 13.08,
+      "playablePct": 85
+    }
+  ],
+  "after": [
+    {
+      "type": "normal",
+      "meanLetters": 9.87,
+      "meanWordChoices": 1048.4,
+      "playablePct": 100
+    },
+    {
+      "type": "precision",
+      "meanLetters": 7.29,
+      "meanWordChoices": 291.37,
+      "playablePct": 100
+    },
+    {
+      "type": "pass",
+      "meanLetters": 7.45,
+      "meanWordChoices": 521.56,
+      "playablePct": 97
+    }
+  ]
+}
